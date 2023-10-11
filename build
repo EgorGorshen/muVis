@@ -1,0 +1,8 @@
+#!/bin/sh 
+
+set -xe 
+
+FLAGS="-Wall -Wextra"
+LIBS="$(pkg-config --libs --cflags raylib) -lm -ldl -lpthread"
+
+clang $FLAGS -o muViz main.c $LIBS
