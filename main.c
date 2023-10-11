@@ -9,7 +9,8 @@ int main(void)
     SetTargetFPS(60);
 
     InitAudioDevice();
-    Music music = LoadMusicStream("/Users/gorsenkovegor/Downloads/mp3/Nirvana.mp3");
+    Music music = LoadMusicStream(
+        "/Users/gorsenkovegor/Downloads/mp3/Nirvana.mp3"); // WARNING: музыка не играет скорее всего проблема с доступом
     PlayMusicStream(music);
     while (!WindowShouldClose())
     {
